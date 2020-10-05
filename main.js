@@ -2,44 +2,44 @@
 
 {
 
-  const myfunc = document.getElementById("myfunc");
-  const output = document.getElementById("output");
-  const fragment = document.createDocumentFragment();
-  const pElement = document.createElement('p');
+  const MY_FUNC = document.getElementById("my-func");
+  const OUTPUT = document.getElementById("output");
+  const FRAGMENT = document.createDocumentFragment();
+  const P_ELEMENT = document.createElement('p');
 
-  myfunc.addEventListener('click', () => {
+  MY_FUNC.addEventListener('click', () => {
 
-    const fizz = document.getElementById("fizznumbers").value;
-    const buzz = document.getElementById("buzznumbers").value;
+    const FIZZ = document.getElementById("fizz-numbers").value;
+    const BUZZ = document.getElementById("buzz-numbers").value;
 
-    while (output.firstChild) {
-      output.removeChild(output.firstChild);
+    while (OUTPUT.firstChild) {
+      OUTPUT.removeChild(OUTPUT.firstChild);
     }
 
-    if (/^\d+$/.test(fizz, buzz)) {
+    if (/^\d+$/.test(FIZZ) || /^\d+$/.test(BUZZ)) {
 
       for (let i = 1; i <= 99; i++) {
-        const pElement = document.createElement('p');
-        if (i % fizz === 0 && i % buzz === 0) {
-          pElement.textContent = `FizzBuzz ${i}`;
-          fragment.appendChild(pElement);
+        const P_ELEMENT = document.createElement('p');
+        if (i % FIZZ === 0 && i % BUZZ === 0) {
+          P_ELEMENT.textContent = `FizzBuzz ${i}`;
+          FRAGMENT.appendChild(P_ELEMENT);
 
-        } else if (i % fizz === 0) {
-          pElement.textContent = `Fizz ${i}`;
-          fragment.appendChild(pElement);
+        } else if (i % FIZZ === 0) {
+          P_ELEMENT.textContent = `Fizz ${i}`;
+          FRAGMENT.appendChild(P_ELEMENT);
 
-        } else if (i % buzz === 0) {
-          pElement.textContent = `buzz ${i}`;
-          fragment.appendChild(pElement);
+        } else if (i % BUZZ === 0) {
+          P_ELEMENT.textContent = `Buzz ${i}`;
+          FRAGMENT.appendChild(P_ELEMENT);
         }
       }
 
     } else {
-      pElement.textContent = "整数値を入れてください";
-      fragment.appendChild(pElement);
+      P_ELEMENT.textContent = "整数値を入れてください";
+      FRAGMENT.appendChild(P_ELEMENT);
     }
 
-    output.appendChild(fragment);
+    OUTPUT.appendChild(FRAGMENT);
   });
   
 }
