@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>FizzBuzz</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <h1>FizzBuzz問題</h1>
+  </header>
+
+  <div class="wrapper" id="home">
+
+    <form name="my-form" id="fm-01" action="">
+      <div class="column">
+        <label for="fizz-numbers"><span class="mar-12">FizzNum:</span></label><input id="fizz-numbers" class="space"
+          type="text" name="fizz-num" placeholder="整数値を入力してください" maxlength="2">
+      </div>
+      <div class="column">
+        <label for="buzz-numbers"><span class="mar-5">BuzzNum:</span></label><input id="buzz-numbers" class="space"
+          type="text" name="buzz-num" placeholder="整数値を入力してください" maxlength="2">
+      </div>
+      <!-- <button name="btn">実行</button> -->
+      <input type="button" id="my-func" value="実行" form="fm01">
+    </form>
+
+
+    <p class="pad-10">【出力】</p>
+    <div id="output"></div>
+
+  </div>
+
+
+  <script src="main.js"></script>
+</body>
+</html>

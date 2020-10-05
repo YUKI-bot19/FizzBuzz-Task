@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+/* body {
+  padding: 0;
+  margin: 0;
+} */
+
+p {
+  margin: 0;
+}
+
+.mar-5 {
+  margin-right: 5px;
+}
+
+.mar-12 {
+  margin-right: 12px;
+}
+
+.pad-10 {
+  padding: 20px 0;
+}
+
+.space {
+  width: 160px;
+}
+
+.column {
+  margin-bottom: 2px;
+}
